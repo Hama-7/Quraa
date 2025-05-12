@@ -14,11 +14,11 @@ THEMES = {
 def configure_theme():
     """
     Initialize the theme from the URL query param (if any)
-    using get_query_params, to avoid conflict
-    with st.set_query_params in go_signin.py.
+    using experimental_get_query_params, to avoid conflict
+    with st.experimental_set_query_params in go_signin.py.
     """
     # Use the same “experimental” approach
-    query_params = st.get_query_params()
+    query_params = st.experimental_get_query_params()
     
     # If you store ?theme=dark or ?theme=light in the URL
     if "theme" in query_params:
